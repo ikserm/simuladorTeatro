@@ -15,40 +15,57 @@
 	<br>
 	<button type="button"  class="btn btn-outline-secondary"><a href="Index.html">Regresar</a></button>
 	<br><br>
-	<div class="row align-items-center">
+	<div class="">
 		<table class="table">
-			<th>
-				<td>
-					Simulacion
-				</td>
-				<td>
-					Atributo1
-				</td>
-				<td>
-					Atributo2
-				</td>
-				<td>
-					Atributo3
-				</td>
-				<td>
-					Atributo4
-				</td>
-			</th>
+			<tr>
+				<th>
+					Atributo
+				</th>
+				<th>
+					Atributo
+				</th>
+				<th>
+					Atributo
+				</th>
+				<th>
+					Atributo
+				</th>
+				<th>
+					Atributo
+				</th>
+			</tr>
 			<tr>
 				<td>
-					.
+					Atributo
 				</td>
 				<td>
-					.
+					Atributo
 				</td>
 				<td>
-					.
+					Atributo
 				</td>
 				<td>
-					.
+					Atributo
 				</td>
 				<td>
-					.
+					Atributo
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Atributo
+				</td>
+				<td>
+					Atributo
+				</td>
+				<td>
+					Atributo
+				</td>
+				<td>
+					Atributo
+				</td>
+				<td>
+					Atributo
 				</td>
 			</tr>
 		</table>		
