@@ -1,4 +1,6 @@
 <?php
+$conexion = mysqli_connect('localhost','root','','teatro');
+
 $fila=$_REQUEST["fila"];
 $columna=$_REQUEST["columna"];
 $min_grupo=$_REQUEST["min_grupo"];
@@ -19,6 +21,14 @@ for ($i=0; $i < $fila; $i++) {
 }
 
 echo "</table>";
+
+// INSERTAR
+$sql = "INSERT INTO asientos (fila, columna)
+			VALUES ('$fila','$columna')";
+
+echo mysqli_query($conexion, $sql);
+
+
 
 ?>
 

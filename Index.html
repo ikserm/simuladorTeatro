@@ -13,21 +13,21 @@
 		<br>
 		<h2>Simulador de ordenamiento en sillas</h2>
 		<br>
-		<form>
+		<form id="formAjax"> 
 			Cantidad de filas
-			<input type="text" id="fila" class="form-control" name="">
+			<input type="text" id="fila" class="form-control" name="fila">
 			Sillas por fila
 			<br>
-			<input type="text" id="columna" class="form-control" name="">
+			<input type="text" id="columna" class="form-control" name="columna">
 			<br>
 			Tamaño mínimo de grupo
-			<input type="text" id="min-grupo" class="form-control" name="">
+			<input type="text" id="min-grupo" class="form-control" name="min-grupo">
 			Tamaño máximo de grupo
 			<br>
-			<input type="text" id="max-grupo" class="form-control" name="">
+			<input type="text" id="max-grupo" class="form-control" name="max-grupo">
 			<br>
 			Cantidad de grupos rechazados
-			<input type="text" id="grupos-rechazados" class="form-control" name="">
+			<input type="text" id="grupos-rechazados" class="form-control" name="grupos-rechazados">
 
 			
 		  <br>
@@ -52,7 +52,7 @@
 							$('#simular').click(function(){
 					            
 		 						var i = 0;
-		 						while(i<3){
+		 						while(i<1){
 
 		 							i++;
 									
@@ -66,26 +66,34 @@
 		                                max_grupo: +$("#max-grupo").val(),
 		                                grupos_rechazados: +$("#grupos-rechazados").val(),
 		                                i:i
-		                        	};
+									};
+									
 					                $.ajax({
-					                        type: 'POST',
+										type: 'POST',
 					                        url: 'class/generadorAsientos.php',
 					                        data: form_data,
 					                        success: function(response)
 					                        {
 					                            $('.matriz-asientos').html(response).fadeIn();
 					                        }
-					                });
+										});
+										
+									}
+							});				
+							
+							// $('#simular').click(function(){
+							// var datos = $('#formAjax').serialize();
+							// 		// alert(datos);
+									
+							// 		$.ajax({
+							// 			type: 'POST',
+					        //                 url: 'class/generadorAsientos.php',
+					        //                 data: datos,
+					        //                 success: function()
+					        //                 {}
+							// 			});
 
-								}
-
-
-
-					        });
-
-	 						
-
-
+							// });
 				        });
 	               
 	            </script>
