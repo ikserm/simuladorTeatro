@@ -53,6 +53,7 @@
 					            
 		 						var i = 0;
 		 						while(i<3){
+
 		 							i++;
 									
 
@@ -61,6 +62,9 @@
 		                                is_ajax: 1,
 		                                fila: +$("#fila").val(),
 		                                columna: +$("#columna").val(),
+		                                min_grupo: +$("#min-grupo").val(),
+		                                max_grupo: +$("#max-grupo").val(),
+		                                grupos_rechazados: +$("#grupos-rechazados").val(),
 		                                i:i
 		                        	};
 					                $.ajax({
@@ -69,7 +73,7 @@
 					                        data: form_data,
 					                        success: function(response)
 					                        {
-					                            $('.matriz-asientos').html(response+i).delay(3000).fadeIn();
+					                            $('.matriz-asientos').html(response).fadeIn();
 					                        }
 					                });
 
