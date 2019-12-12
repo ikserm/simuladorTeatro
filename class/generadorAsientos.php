@@ -23,8 +23,13 @@ for ($i=0; $i < $fila; $i++) {
 echo "</table>";
 
 // INSERTAR
-$sql = "INSERT INTO asientos (fila, columna)
-			VALUES ('$fila','$columna')";
+// $sql = "INSERT INTO asientos (fila, columna)
+// 			VALUES ('$fila','$columna')";
+
+$sql = "INSERT INTO corrida (fila, columna, min_grupo, max_grupo, grupos_rechazados)
+			VALUES ('$fila','$columna', '$min_grupo', '$max_grupo','$grupos_rechazados')";
+
+
 
 echo mysqli_query($conexion, $sql);
 
